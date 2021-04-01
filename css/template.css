@@ -56,10 +56,20 @@ h4{ font-size: 18px; margin-top: 0; }
 /* Blog */
 .wp-post-image{ float: left; margin: 0 15px 10px 0; }
 .format-image h2{ color: #fff; background: #717171; padding: 15px; }
-.format-video h2{ color: #fff; background: #212121; padding: 15px; }
+.format-video h2{ color: #fff; background: #212121; padding: 15px;  }
 .format-standard h2{ color: #444; background: #dfeac9; padding: 15px; }
 .blog article{ display: inline-block; margin: 0 0 30px; width: 100%; }
 .blog article h2{ margin-bottom: 15px; }
 .blog article p > img{ width: 100%; height: auto; }
 .blog .meta-info p{ line-height: 1em; font-weight: bold; }
 .blog .meta-info p > a{ color: #9d9d9d; font-weight: normal; }
+
+
+/* Middle Area - Featured News */
+.home .news h1{ color: #4c1b1b; text-transform: uppercase; font-size: 38px; font-weight: bold; }
+.home .news .format-image h2, .home .news .format-video h2, .home .news .format-standard h2 { color: #000; background: transparent; display: inline-block;
+ padding: 10px 0 5px; font-weight: bold; } 
+.home .news .featured h2{ font-size: 35px; }
+.home .news .secondary h2{ font-size: 20px; }
+.home .news .meta-info p{ font-weight: bold; margin-bottom: 0; }
+.home .news span, .news span a{ color: #757575; font-weight: normal; margin: 0 2px 0 0; }
