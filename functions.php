@@ -88,4 +88,3 @@ function learnwp_sidebars(){
 		)
 	);
 }
-//testing
