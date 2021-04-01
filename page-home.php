@@ -85,8 +85,8 @@
 										'post_type' => 'post',
 										'posts_per_page' => 2,
 										'category__not_in' => array(8),
-										'category__in' => array(9,11),
-									);
+										'category__in' => array(9,21),
+										'offset' => 1									);
 
 									$secondary = new WP_Query($args);
 
