@@ -8,6 +8,15 @@
 			while( have_posts() ):
 				the_post();
 				get_template_part( 'template-parts/content', 'single' );
+
+				// Display a comment form if this post is open to comments
+				if( comments_open() || get_comments_number() ):
+				// Display the default comments form, or a custom form (type the custom filename inside the parenthesis).
+				// Example: comments_template( 'filename.php' );
+					comments_template();
+				endif;
+
+
 			endwhile;
 			 ?>
 
