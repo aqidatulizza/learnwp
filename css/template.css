@@ -76,6 +76,6 @@ h4{ font-size: 18px; margin-top: 0; }
 
 /* Comments */
 .comment-respond{ margin: 30px 0; }
-.comment-respond label{ width: 100%; }
+.comment-respond label{ width: 95%; }
 #commentform input[type="submit"]{ background: #b9121b; border: 0; color: #ffffff; text-transform: uppercase; padding: 15px; }
 

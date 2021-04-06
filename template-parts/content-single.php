@@ -9,6 +9,6 @@
 	</div>
  	</header>
  	<div class="content">
- 		<?php the_content(); ?>
+ 		<p><?php the_content(); ?></p>
  	</div>	
 </article>
