@@ -3,11 +3,13 @@
 <div id="primary">
 	<div id="main">
 		<div class="container">
-			
+			<p>
 			<h2>Search result for: <?php echo get_search_query(); ?></h2>
 			<?php 
 			get_search_form();
-
+			?>
+			</p>
+			<?php
 			while( have_posts() ):
 				the_post();
 				get_template_part( 'template-parts/content', 'search' );

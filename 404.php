@@ -16,8 +16,10 @@
 							</header>
 
 							<div class="error">
+								<div class="search">
 								<p>How about doing a search</p>
-								<?php get_search_form(); ?>
+								<p><?php get_search_form(); ?>
+								</div></p>
 								<?php the_widget( 'WP_Widget_Recent_Posts', array( 'title' => 'Latest Posts', 'number' => 3) ); ?>
 							</div>
 						</div>
