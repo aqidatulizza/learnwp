@@ -3,7 +3,7 @@
 		<main>
 			<section class="slide">
 				<div class="container">
-					<div class="row">Slide</div>
+					<div class="row"><?php motoPressSlider( "home-slider" ) ?></div>
 				</div>
 			</section>
 			<section class="services"> 
@@ -86,7 +86,7 @@
 										'posts_per_page' => 2,
 										'category__not_in' => array(8),
 										'category__in' => array(9,21),
-										'offset' => 1									);
+										'offset' => 2									);
 
 									$secondary = new WP_Query($args);
 
@@ -112,9 +112,15 @@
 				</div>
 			</section>
 			<section class="map">
-				<div class="container">
-					<div class="row">Map</div>
-				</div>
+				<iframe 
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.0850497893207!2d112.62499331421243!3d-7.990153581897637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6281b75ea5485%3A0x90fd5c6fcedf6acf!2sSekolah%20Menengah%20Kejuruan%20Negeri%204%20Malang!5e0!3m2!1sid!2sid!4v1617870577772!5m2!1sid!2sid" 
+				width="100%" 
+				height="300" 
+				style="border:0;" 
+				allowfullscreen="" 
+				loading="lazy">
+					
+				</iframe>
 			</section>
 		</main>
 	</div>

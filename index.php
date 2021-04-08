@@ -32,11 +32,6 @@
 					</div>
 				</div>
 			</section>
-			<section class="map">
-				<div class="container">
-					<div class="row">Map</div>
-				</div>
-			</section>
 		</main>
 	</div>
 <?php get_footer(); ?>
