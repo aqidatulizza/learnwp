@@ -23,6 +23,7 @@ h4{ font-size: 18px; margin-top: 0; }
 .main-menu ul li:last-child{ margin: 0; }
 .main-menu ul li a{ text-transform: uppercase; color: #4c1b1b; text-decoration: none;}
 .main-menu ul  li.current-menu-item a{ color:#e58888; }
+.wpr-search-form .wpr_submit { top: initial !important; }
 
 
 /* Middle Area - Sidebar - Contact Form 7 */
@@ -94,7 +95,7 @@ h4{ font-size: 18px; margin-top: 0; }
 .pagination{ display: block; }
 
 /* Top Bar - Search */
-.search input[type="search"]{ color: black; background: #ededed; border: 0; padding: 3px 7px;}
+.search input[type="search"]{ color: #989898; background: #ededed; border: 0; padding: 3px 10px;}
 .search button{  background: #000; border: 0; color: #fff; padding: 3px 10px 4px; margin-left: -4px; }
 .search label{ margin: 0; }
 .search > form .screen-reader-text, .search-form .screen-reader-text { clip: unset; clip-path: unset; position: relative !important; }
