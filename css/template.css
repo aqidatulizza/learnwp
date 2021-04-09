@@ -106,3 +106,7 @@ h4{ font-size: 18px; margin-top: 0; }
 /* Map */
 .map iframe{ display: block; }
 
+/* Social media */
+.social-media-icons ul{ padding: 0; margin: 0; }
+.social-media-icons ul li{ list-style-type: none; display: inline; margin: 0 5px 0; }
+
