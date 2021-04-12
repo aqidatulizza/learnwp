@@ -28,10 +28,10 @@
 
 							 <div class="row">
 							 	
-							 	<div class="pages col-md-6 text-left">
+							 	<div class="pages col-6 text-left">
 							 		<?php previous_posts_link("<< Newer Posts"); ?>
 							 	</div>
-							 	<div class="pages col-md-6 text-right">
+							 	<div class="pages col-6 text-right">
 							 		<?php next_posts_link("Older Posts >>"); ?>
 							 	</div>
 
@@ -48,12 +48,7 @@
 						<aside class="sidebar col-md-3 h-100"><?php get_sidebar('blog'); ?></aside>
 					</div>
 				</div>
-			</section>
-			<section class="map">
-				<div class="container">
-					<div class="row">Map</div>
-				</div>
-			</section>
+			</section> 
 		</main>
 	</div>
 <?php get_footer(); ?>

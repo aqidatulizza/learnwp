@@ -7,5 +7,5 @@
 		<p>Categorie: <?php the_category( ' ' ); ?></p>
 		<p><?php the_tags( 'Tags: ', ', '); ?></p>
 	</div>
-	<p><?php the_excerpt(); ?></p>
+	<?php the_excerpt(); ?><p></p>
 </article>
