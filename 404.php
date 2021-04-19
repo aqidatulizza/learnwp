@@ -11,16 +11,16 @@
 	
 						<div class="error-404">
 							<header>
-								<h1>Page not found</h1>
-								<p>Unfortunately, the page you tried to reach does not exist on this site!</p>
+								<h1><?php e_( 'Page not found', 'learnwp' ); ?></h1>
+								<p><?php e_( 'Unfortunately, the page you tried to reach does not exist on this site!', 'learnwp' ); ?></p>
 							</header>
 
 							<div class="error">
 								<div class="search">
-								<p>How about doing a search</p>
+								<p><?php e_( 'How about doing a search?', 'learnwp' ); ?></p>
 								<p><?php get_search_form(); ?>
 								</div></p>
-								<?php the_widget( 'WP_Widget_Recent_Posts', array( 'title' => 'Latest Posts', 'number' => 3) ); ?>
+								<?php the_widget( 'WP_Widget_Recent_Posts', array( 'title' => __('Latest Posts', 'learnwp' ), 'number' => 3) ); ?>
 							</div>
 						</div>
 						

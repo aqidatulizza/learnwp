@@ -8,7 +8,7 @@
 			</section>
 			<section class="services"> 
 				<div class="container">
-					<h1>Our Services</h1>
+					<h1><?php _e( 'Our Services', 'learnwp' ); ?></h1>
 					<div class="row">
 						<div class="col-sm-4">
 							<div class="services-item">

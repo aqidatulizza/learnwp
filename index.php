@@ -21,10 +21,24 @@
 								get_template_part( 'template-parts/content', get_post_format() );
 
 							 	endwhile; 
-							 else:
 							 ?>
 
-							  <p>Theré's nothing yet to be displayed</p>
+							  <div class="row">
+							 	
+							 	<div class="pages col-6 text-left">
+							 		<?php previous_posts_link( __("<< Newer Posts", 'learnwp' )); ?>
+							 	</div>
+							 	<div class="pages col-6 text-right">
+							 		<?php next_posts_link( __("Older Posts >>", 'learnwp' )); ?>
+							 	</div>
+
+							 </div>
+
+							 <?php 
+							 	else:
+							  ?>
+
+							  <p><?php _e('There&rsquo;s nothing yet to be displayed', 'learnwp'); ?></p>
 
 							<?php endif; ?>
 						</div>

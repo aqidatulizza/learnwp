@@ -1,11 +1,11 @@
 
 /* google font */
 
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,400,900');
-@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sans+Serif&display=swap');
 
-body{ font: 16px/1.6 'Anton', sans-serif;  }
-body p{ font: 16px/1.6 'Gill Sans', sans-serif; }
+body{ font: 16px/1.6 'Roboto', sans-serif;  }
+body p{ font: 17px/1.7 'Sans Serif', sans-serif; }
 h1{ font-size: 28px; margin: 15px 0 15px; }
 h2{ font-size: 24px; margin-top: 0; }
 h3{ font-size: 20px; margin-top: 0; }
@@ -116,3 +116,35 @@ h4{ font-size: 18px; margin-top: 0; }
 
 /* logo */
 .align{display: flex; align-items: center; width: 100%;} 
+
+/**************** Gutenberg *****************/
+
+@media only screen and (min-width: 1140px){
+	.alignfull, .alignwide{
+		margin-bottom: 2em;
+	}
+	.alignwide{
+		width: 75vw;
+		margin-left: 50%;
+		transform: translateX(-50%);
+	}
+	.alignfull{
+		width: 100vw;
+		margin-left:50%;
+		transform: translateX(-50%); 
+	}
+}
+
+.has-blood-red-background-color{
+    background: #b9121b;
+}
+.has-blood-red-color{
+    color: #b9121b;
+}
+
+.has-white-background-color{
+    background-color: #ffffff;
+}
+.has-white-color{
+    color: #ffffff;
+}

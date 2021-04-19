@@ -3,13 +3,24 @@
 // Requiring Theme Customizer
 require get_template_directory() . '/inc/customizer.php';
 
+// Requiring TGM Plugin Activation
+require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/inc/required-plugins.php';
+
 // including stylesheet and script files
 function load_scripts(){
 	wp_enqueue_script('bootstrap-js','https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery'),'4.0.0', true );
 	wp_enqueue_style('bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', array(), '4.0.0','all' );
 	wp_enqueue_style('template', get_template_directory_uri().'/css/template.css', array(), '1.0','all' );
+	wp_enqueue_script('fitVids', get_template_directory_uri(). '/js/fitvids.js', array( 'jquery' ), null, true );
 }
 add_action('wp_enqueue_scripts','load_scripts'); 
+
+function learnwp_gutenberg_fonts(){
+	wp_enqueue_style('Sans Serif-font', 'https://fonts.googleapis.com/css2?family=Sans+Serif&display=swap');
+	wp_enqueue_style('Roboto-font', 'https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+}
+add_action('enqueue_block_editor_assets', 'learnwp_gutenberg_fonts');
 
 //Main configuration function
 function learnwp_config(){
@@ -17,8 +28,8 @@ function learnwp_config(){
 	// Registering our menus
 	register_nav_menus(
 		array(
-			'my_main_menu' => 'Main Menu',
-			'footer_menu' => 'Footer Menu'
+			'my_main_menu' => __('Main Menu', 'learnwp'),
+			'footer_menu' => __('Footer Menu', 'learnwp')
 		)
 	);
 
@@ -34,6 +45,28 @@ function learnwp_config(){
 		'height' => 110,
 		'width' => 200 
 	) );
+
+	$textdomain = 'learnwp';
+	load_theme_textdomain( $textdomain, get_stylesheet_directory() . '/languages/'  );
+	load_theme_textdomain( $textdomain, get_template_directory() . '/languages/'  );
+
+	// Support for Gutenberg feature 
+	add_theme_support( 'align-wide' );
+	add_theme_support( 'editor-color-palette', array(
+		array(
+			'name' => __('Blood Red', 'learnwp'),
+			'slug' => 'blood-red',
+			'color' => '#b9121b'
+		),
+		array(
+			'name' => __('White', 'learnwp'),
+			'slug' => 'white',
+			'color' => '#ffffff'
+		)
+	) );
+	add_theme_support('editor-styles');
+	add_editor_style('css/style-editor.css');
+	add_theme_support('wp-block-styles');
 }
 add_action( 'after_setup_theme', 'learnwp_config', 0 );
 
@@ -42,9 +75,9 @@ add_action( 'widgets_init', 'learnwp_sidebars' );
 function learnwp_sidebars(){
 	register_sidebar(
 		array(
-			'name' => 'Home Page Sidebar',
+			'name' => __('Home Page Sidebar', 'learnwp'),
 			'id' => 'sidebar-1',
-			'description' => 'This is the Home Page Sidebar. You can add your widgets here. ',
+			'description' => __('This is the Home Page Sidebar. You can add your widgets here. ', 'learnwp'),
 			'before_widget' => '<div class="widget-wrapper">',
 			'after_widget' => '</div>',
 			'before_title' => '<h2 class="widget-title">',
@@ -53,9 +86,9 @@ function learnwp_sidebars(){
 	);
 	register_sidebar(
 		array(
-			'name' => 'Blog Sidebar',
+			'name' => __('Blog Sidebar', 'learnwp'),
 			'id' => 'sidebar-2',
-			'description' => 'This is the Blog Sidebar. You can add your widgets here. ',
+			'description' => __('This is the Blog Sidebar. You can add your widgets here. ', 'learnwp'),
 			'before_widget' => '<div class="widget-wrapper">',
 			'after_widget' => '</div>',
 			'before_title' => '<h2 class="widget-title">',
@@ -64,9 +97,9 @@ function learnwp_sidebars(){
 	);
 	register_sidebar(
 		array(
-			'name' => 'Service 1',
+			'name' => __('Service 1', 'learnwp'),
 			'id' => 'services-1',
-			'description' => 'First Services Area. ',
+			'description' => __('First Services Area. ', 'learnwp'),
 			'before_widget' => '<div class="widget-wrapper">',
 			'after_widget' => '</div>',
 			'before_title' => '<h2 class="widget-title">',
@@ -75,9 +108,9 @@ function learnwp_sidebars(){
 	);
 	register_sidebar(
 		array(
-			'name' => 'Service 2',
+			'name' => __('Service 2', 'learnwp'),
 			'id' => 'services-2',
-			'description' => 'Second Services Area. ',
+			'description' => __('Second Services Area. ', 'learnwp'),
 			'before_widget' => '<div class="widget-wrapper">',
 			'after_widget' => '</div>',
 			'before_title' => '<h2 class="widget-title">',
@@ -86,9 +119,9 @@ function learnwp_sidebars(){
 	);
 	register_sidebar(
 		array(
-			'name' => 'Service 3',
+			'name' => __('Service 3', 'learnwp'),
 			'id' => 'services-3',
-			'description' => 'Third Services Area. ',
+			'description' => __('Third Services Area. ', 'learnwp'),
 			'before_widget' => '<div class="widget-wrapper">',
 			'after_widget' => '</div>',
 			'before_title' => '<h2 class="widget-title">',
@@ -97,9 +130,9 @@ function learnwp_sidebars(){
 	);
 	register_sidebar(
 		array(
-			'name' => 'Social Media Icons',
+			'name' => __('Social Media Icons', 'learnwp'),
 			'id' => 'social-media',
-			'description' => 'Social Media Icons Widget Area. Drag and drop your widgets here. ',
+			'description' => __('Social Media Icons Widget Area. Drag and drop your widgets here. ', 'learnwp'),
 			'before_widget' => '<div class="widget-wrapper">',
 			'after_widget' => '</div>',
 			'before_title' => '<h2 class="widget-title">',

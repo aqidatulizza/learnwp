@@ -31,14 +31,12 @@ Template Name: General Template
 							 	<p><?php the_content(); ?></p>
 							 </article>
 
-							 <p>This page template is the same on all selected pages</p>
-
 							 <?php 
 							 endwhile; 
 							 else:
 							 ?>
 
-							  <p>Theré's nothing yet to be displayed</p>
+							  <p><?php _e('There&rsquo;s nothing yet to be displayed', 'learnwp'); ?></p>
 
 							<?php endif; ?>
 						</div>
